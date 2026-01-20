@@ -12,3 +12,12 @@ cd my-react-app para entrar a la carpeta
 npm install para instalar las dependencias de mi proyecto react
 npm run dev para ejecutar el proyecto
 una vez que ya este en tu pc solo ejecuta los ultimos comandos para ejecutrarla 
+vite. es para que funcione todo el sistema es un archivo de configuración que indica a Vite cómo ejecutar la aplicación. 
+package.json registra datos del sistema para eviar plagio y dar mantenimiento con versiones correctas o asi, todas las dependencias estan aqui.
+.eslintrc.cjs es para que nos diga si tenemos un error en el dom(pagina principal o marco de travbajo), verifica errores y sintaxys
+index. es un documento esatico y contiene introduccion al proyecto
+
+**componentes react**
+es una 
+
+jsx es js pero con html
