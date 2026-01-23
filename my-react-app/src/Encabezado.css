@@ -1,0 +1,29 @@
+h2{
+    color: #6a8e7f;
+    background-color: #d0cfec;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+h1{
+    color: #edc7cf;
+    background: linear-gradient(135deg, #989572 0%, #c6ae82 100%);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+div > img {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+div:first-child {
+    text-align: center;
+    padding: 20px 0;
+}

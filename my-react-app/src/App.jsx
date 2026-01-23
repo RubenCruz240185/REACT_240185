@@ -1,6 +1,8 @@
+import Encabezado from "./Encabezado";
 function App(){
   return (
   <div>
+  <Encabezado/>
   <h1>5A EVND</h1>
   <h2>Alumno</h2>
   <h3>Ruben Emanuel cruz Garcia</h3>
@@ -11,9 +13,9 @@ function App(){
   )
 }
 function UserComponent(){
-  const nombre = 'hot';
-  const apellidos = 'dog';
-  const nombreCompleto = <h3>El nombre es: {nombre} y sus apellidos {apellidos}</h3>; 
+  const nombre = 'Ema';
+  const apellidos = 'Nem';
+  const nombreCompleto = <h1>El nombre es: {nombre} y sus apellidos {apellidos}</h1>; 
   return <h3>User Component {nombreCompleto}</h3>;
 }
 function ProfileComponent(){
