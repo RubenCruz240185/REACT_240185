@@ -1,0 +1,390 @@
+import ContenedorTarjeta from "./ContenedorTarjetas";
+import Encabezado from "./Encabezado";  
+
+function App(){
+  return (
+  <div>
+    <Encabezado />
+    <ContenedorTarjeta />
+    <h1>5A EVND</h1>
+    <h2>Profesor</h2>
+    <h3>M.T.I Ricardo Luna Santos</h3>
+    <h3>Alumnos</h3>
+    <h4>Erik</h4>
+    <h4>Ema</h4>
+    <h4>Joa</h4>
+    <h4>Bruno</h4>
+    <UserComponent />
+    <ProfileComponent/>
+    <FeedComponent/>
+    </div>
+  )
+}
+
+function UserComponent(){
+  const nombre = 'Bruno';
+  const apellidos = 'Mendez';
+  const nombrecompleto =<h2>El nombre es {nombre} y su apellido es {apellidos}</h2>
+  return <h1>User Component {nombrecompleto}</h1>
+}
+
+function ProfileComponent(){
+  const users= [
+    { id: 1, name:'Bruno', role:'Web Developer'},
+    { id: 2, name:'Joa', role:'Web Developer'},
+    { id: 3, name:'Ema', role:'Web Developer'},
+  ]
+  return (
+    <>
+    <p>Lista de usuarios del sistema</p>
+    <ul>
+      {
+        users.map(function(user, index){
+          return(
+            <li key={index}>{user.name} es un {user.role}</li>
+          )
+        })
+      }
+    </ul>
+    </>
+  )
+}
+
+function FeedComponent(){
+  const materiales= [
+    { id: 1, name:'Cemento'},
+    { id: 2, name:'Arcilla'},
+    { id: 3, name:'Grava'},
+    { id: 4, name:'arena'},
+    { id: 5, name:'Tierra'},
+
+  ]
+  return(
+    <>
+    <p>Lista de Materiales</p>
+    <ul>
+      {materiales.map(function(material, index){
+        return (
+          <li key={index}>{material.name}</li>
+        )
+      })
+      
+    }
+    </ul> 
+    </>
+  )
+}
+
+export default App
+
+
+
+
+
+
+
+
+
+
+.contenedor-tarjeta {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tarjeta-contenido {
+    padding: 20px;
+}
+
+.tarjeta-contenido h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tarjeta-contenido p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive - 2 columnas en tablets */
+@media (max-width: 1024px) {
+    .contenedor-tarjeta {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive - 1 columna en móviles */
+@media (max-width: 640px) {
+    .contenedor-tarjeta {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ContenedorTarjeta {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    width: 220px;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import './ContenedorTarjeta.css';
+import Tarjeta from './Tarjeta';
+import harry from './assets/Harry.webp';
+
+function ContenedorTarjeta() {
+    return (
+        <div className="contenedor-tarjeta">
+            <Tarjeta 
+                titulo="Tarjeta 1" 
+                descripcion="Aquí va la descripción de tu tarjeta"
+                imagen={harry}
+            />
+            <Tarjeta 
+                titulo="Tarjeta 2" 
+                descripcion="Aquí va la descripción de tu tarjeta"
+                imagen={harry}
+            />
+            <Tarjeta 
+                titulo="Tarjeta 3" 
+                descripcion="Aquí va la descripción de tu tarjeta"
+                imagen={harry}
+            />
+            <Tarjeta 
+                titulo="Tarjeta 4" 
+                descripcion="Aquí va la descripción de tu tarjeta"
+                imagen={harry}
+            />
+        </div>
+    )
+}
+
+export default ContenedorTarjeta;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2{
+    color:blue
+}
+
+
+h1{
+    color:red
+}
+.Encabezado{
+    background-color: rgb(101, 211, 238);
+    width: 100%;
+    display: flex;
+}
+.logoDiv{
+    width: 20%;
+    background-color: rgb(81, 171, 194);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.logoDiv img{
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.menuDiv{
+    width: 60%;
+    background-color: rgb(124, 229, 255);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.menuDiv ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(81, 171, 194);
+    padding: 20px;
+    justify-content: center;
+    color: white;
+
+}
+.menuDiv ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.menuDiv ul li a:hover{
+    background-color: black;
+    padding: 20px;
+}
+
+
+.redesDiv{
+    width: 20%;
+    background-color: rgb(81, 171, 194);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.redesDiv li {
+    list-style: none;
+}
+
+.redesDiv img{
+    width: 40px;
+}
+
+.redesDiv ul{   
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    
+}
+.redesDiv ul li a:hover{
+    width: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+import miLogo from './assets/Logo.png';
+import instagram from './assets/instagram.png';
+import facebook from './assets/facebook.png';
+import pinterest from './assets/pinterest.png';
+import youtube from './assets/youtube.png';
+import './Encabezado.css';
+function Encabezado(){
+    return(
+        <div className="Encabezado">  
+         <Logo />
+         <Menu />
+         <Redes />
+        </div>
+    );
+}
+
+function Logo(){
+    return(
+        <div className="logoDiv">
+            <img src={miLogo} alt="ReactLogo" />
+        </div>
+    );
+}
+
+function Menu(){
+    return(
+        <div className='menuDiv'>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#acerca-de">Acerca de</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
+        </div>
+    );
+}
+
+function Redes(){
+    return(
+        <div className='redesDiv'>   
+              <li><a href="#"><img src={pinterest} alt="ReactPinterest" /></a></li> 
+              <li><a href="#"><img src={instagram} alt="ReactInstagram" /></a></li>
+              <li><a href="#"><img src={facebook} alt="ReactFacebook" /></a></li>
+              <li><a href="#"><img src={youtube} alt="ReactYoutube" /></a></li>
+        </div>
+    )
+}
+
+export default Encabezado
