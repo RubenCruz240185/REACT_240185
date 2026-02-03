@@ -1,4 +1,5 @@
 import Encabezado from "./Encabezado";
+import ContenedorTarjetas from "./ContenedorTarjetas";
 function App(){
   return (
   <div>
@@ -9,6 +10,7 @@ function App(){
   <UserComponent />
   <ProfileComponent/>
   <FeedComponent/>
+  <ContenedorTarjetas/>
   </div>
   )
 }

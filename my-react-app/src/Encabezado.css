@@ -1,14 +1,14 @@
-h2{
-    color: #6a8e7f;
-    background-color: #d0cfec;
+h2 {
+    color: #ffffff;
+    background-color: #7dba84;
     padding: 15px;
     border-radius: 8px;
     font-family: Arial, sans-serif;
 }
 
-h1{
-    color: #edc7cf;
-    background: linear-gradient(135deg, #989572 0%, #c6ae82 100%);
+h1 {
+    color: #ffffff;
+    background: linear-gradient(135deg, #77ad78 0%, #6f8f72 100%);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -26,4 +26,111 @@ div > img {
 div:first-child {
     text-align: center;
     padding: 20px 0;
+}
+
+.Encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #8fd694 0%, #7dba84 50%, #77ad78 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.logoDiv {
+    width: 20%;
+    background-color: #7dba84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.logoDiv img {
+    width: 80px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuDiv {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.menuDiv ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    justify-content: center;
+    margin: 0;
+}
+
+.menuDiv ul li {
+    transition: all 0.3s ease;
+}
+
+.menuDiv ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.menuDiv ul li a:hover {
+    background-color: #504b43;
+    padding: 10px 15px;
+    transform: scale(1.05);
+}
+
+.redesDiv {
+    width: 20%;
+    background-color: #77ad78;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.redesDiv li {
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.redesDiv img {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.redesDiv img:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+.redesDiv ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.redesDiv ul li a:hover {
+    opacity: 0.8;
 }

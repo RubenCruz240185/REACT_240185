@@ -5,11 +5,10 @@ import github from './assets/LogosRedes/github.png';
 import './Encabezado.css';
 function Encabezado(){
     return (
-        <div>
-            <Logo/>
-            <Menu/>
-            <Redes/>
-            <h2>Bienvenido al hot-dog rush</h2>
+        <div className="Encabezado">
+            <Logo className="LogoDiv"/>
+            <Menu className="MenuDiv"/>
+            <Redes className="redesDiv"/>
         </div>
     );
 }
