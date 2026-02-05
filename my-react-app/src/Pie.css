@@ -1,0 +1,26 @@
+.ContenedorPie {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    font-family: ligas;
+    background-color:  #8fd694;
+    font-size: 20px;
+}
+
+.Pie {
+    width: 50%;
+    text-align: left;
+    margin-left: 50px;
+    color: #504b43; /* tono café/gris */
+}
+
+.Pie2 {
+    width: 50%;
+    text-align: right;
+    margin-right: 50px;
+    color: #6f8f72; /* verde grisáceo */
+}
+

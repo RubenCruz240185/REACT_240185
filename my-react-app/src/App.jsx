@@ -1,19 +1,25 @@
 import Encabezado from "./Encabezado";
 import ContenedorTarjetas from "./ContenedorTarjetas";
+import ContenedorInformacion from "./Informacion";
+import ContenedorPie from "./Pie";
 function App(){
   return (
-  <div>
+  <div className="App">
   <Encabezado/>
-  <h1>5A EVND</h1>
+  <ContenedorTarjetas/>
+  <ContenedorInformacion/>
+  <ContenedorPie/>
+    </div>
+  )
+}
+  {/*<h1>5A EVND</h1>
   <h2>Alumno</h2>
   <h3>Ruben Emanuel cruz Garcia</h3>
   <UserComponent />
   <ProfileComponent/>
   <FeedComponent/>
-  <ContenedorTarjetas/>
-  </div>
-  )
-}
+ 
+
 function UserComponent(){
   const nombre = 'Ema';
   const apellidos = 'Nem';
@@ -62,4 +68,5 @@ function FeedComponent(){
   </>
   );
 }
+   */}
 export default App

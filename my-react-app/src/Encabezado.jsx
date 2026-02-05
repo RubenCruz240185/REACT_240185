@@ -1,45 +1,50 @@
-import logo from './assets/Logos/kyle.png';
+import miLogo from './assets/Logos/kyle.png';
 import linkedin from './assets/LogosRedes/linkedin.png';
 import instagram from './assets/LogosRedes/instagram.png';
 import github from './assets/LogosRedes/github.png';
 import './Encabezado.css';
-function Encabezado(){
+
+function Encabezado() {
     return (
         <div className="Encabezado">
-            <Logo className="LogoDiv"/>
-            <Menu className="MenuDiv"/>
-            <Redes className="redesDiv"/>
+            <div>
+                <Logo/>
+                <Menu/>
+                <Redes/>
+            </div> 
         </div>
     );
 }
+
 function Logo(){
-    return(<div>
-            <img src={logo} alt="ReactLogo"/>
-            
+    return (
+        <div className="Logo">
+            <img src={miLogo} alt="React Logo" />
         </div>
-    )
+    );
 }
+
 function Menu(){
-    return(
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li>Productos</li>
-                <li>Fotos</li>
-                <li>Sucursales</li>
-            </ul>
-        </nav>
-    )
+    return (
+    <div className="menuDiv">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>   
+            <li><a href="#">Sucursales</a></li>
+        </ul>
+    </div>
+    );
 }
 function Redes(){
     return(
-        <nav>
+        <div className="redesDiv">
             <ul>
-                <img src={instagram} alt="instagram"/>
-                <img src={github} alt="github"/>
-                <img src={linkedin} alt="linkedin"/>
+                <li><img src={instagram} alt="instagram"/></li>
+                <li><img src={github} alt="github"/></li>
+                <li><img src={linkedin} alt="linkedin"/></li>
             </ul>
-        </nav>
+        </div>
     )
 }
 export default Encabezado
