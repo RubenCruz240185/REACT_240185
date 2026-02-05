@@ -1,5 +1,4 @@
 import './Informacion.css';
-
 function ContenedorInformacion(){
     return(
         <Informacion />
@@ -9,8 +8,8 @@ function ContenedorInformacion(){
 function Informacion(){
   return(
        <div className="Info">
-            <h3>Aqui deberia haber un titulo</h3>
-            <p>Aqui deberia haber un texto</p>
+            <h3>Conteido</h3>
+            <p>Aqui deberia haber contenido</p>
             <a href="#">Ver más</a>
         </div>    
     )
