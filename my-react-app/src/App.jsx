@@ -1,12 +1,15 @@
-import Encabezado from "./Encabezado";
-import ContenedorTarjetas from "./ContenedorTarjetas";
-import ContenedorInformacion from "./Informacion";
-import ContenedorPie from "./Pie";
+import Encabezado from "./Encabezado.jsx";
+import {useState} from "react";
+import ContenedorTarjetas from "./ContenedorTarjetas.jsx";
+import ContenedorInformacion from "./Informacion.jsx";
+import ContenedorPie from "./Pie.jsx";
+
 function App(){
+  const [vista, setVista] = useState("Inicio");
   return (
   <div className="App">
-  <Encabezado/>
-  <ContenedorTarjetas/>
+  <Encabezado CambiarVista={setVista}/>
+  <ContenedorTarjetas vista={vista}/>
   <ContenedorInformacion/>
   <ContenedorPie/>
     </div>
