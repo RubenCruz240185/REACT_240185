@@ -12,7 +12,7 @@ function Informacion(){
             <p>Aqui deberia haber contenido</p>
             <a href="#">Ver más</a>
         </div>    
-    )
+    );
 }
         
 

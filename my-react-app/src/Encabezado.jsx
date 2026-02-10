@@ -5,12 +5,12 @@ import github from './assets/LogosRedes/github.png';
 import './Encabezado.css';
 import PropTypes from'prop-types';
 
-function Encabezado({cambiarVista}) {
+function Encabezado({CambiarVista}) {
     return (
         <div className="Encabezado">
             <div>
                 <Logo/>
-                <Menu cambiarVista={cambiarVista}/>
+                <Menu CambiarVista={CambiarVista}/>
                 <Redes/>
             </div> 
         </div>
@@ -24,15 +24,15 @@ function Logo(){
         </div>
     );
 }
-function Menu({cambiarVista}){
+function Menu({CambiarVista}){
     return (
     <div className="menuDiv">
         <ul>
-            <li onClick={() => cambiarVista("Inicio")}>Inicio</li>
-            <li onClick={() => cambiarVista("AcercaDe")}>Acerca de</li>
-            <li onClick={() => cambiarVista("Conatcto")}>Contacto</li>
-            <li onClick={() => cambiarVista("Sucursales")}>Sucursales</li>
-            <li onClick={() => cambiarVista("Galeria")}>Galeria</li>
+            <li onClick={() => CambiarVista("Inicio")}>Inicio</li>
+            <li onClick={() => CambiarVista("AcercaDe")}>Acerca de</li>
+            <li onClick={() => CambiarVista("Contacto")}>Contacto</li>
+            <li onClick={() => CambiarVista("Sucursales")}>Sucursales</li>
+            <li onClick={() => CambiarVista("Galeria")}>Galeria</li>
         </ul>
     </div>
     );
@@ -49,9 +49,9 @@ function Redes(){
     )
 }
 Encabezado.propTypes = {
-    cambiarVista : PropTypes.func.isRequired
-}
+    CambiarVista : PropTypes.func.isRequired,
+};
 Menu.propTypes = {
-    cambiarVista : PropTypes.func.isRequired
-}
+    CambiarVista : PropTypes.func.isRequired,
+};
 export default Encabezado;
