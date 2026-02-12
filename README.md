@@ -11,6 +11,7 @@ aceptamos, luego damos
 cd my-react-app para entrar a la carpeta
 npm install para instalar las dependencias de mi proyecto react
 npm run dev para ejecutar el proyecto
+npm install @react-google-maps/api
 una vez que ya este en tu pc solo ejecuta los ultimos comandos para ejecutrarla 
 vite. es para que funcione todo el sistema es un archivo de configuración que indica a Vite cómo ejecutar la aplicación. 
 package.json registra datos del sistema para eviar plagio y dar mantenimiento con versiones correctas o asi, todas las dependencias estan aqui.

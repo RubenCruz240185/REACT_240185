@@ -28,7 +28,6 @@ function Tarjeta(props) {
     <img src={props.imagen} alt={props.titulo}/> 
     <h3>{props.titulo}</h3> 
     <p>{props.descripcion}</p>
-     <a href="#">Ver más</a> 
      </div> 
      ); 
     }
@@ -37,10 +36,10 @@ function Inicio(){
         <>
         <div className="ContenedorTarjetas">
             <div className="tarjetas">
-            <Tarjeta titulo="Java" descripcion="Lenguaje de programación orientado a objetos" imagen="https://ovacen.com/wp-content/uploads/2018/02/vinilos-para-paredes.jpg.webp"/>
-            <Tarjeta titulo="Python" descripcion="Lenguaje de programación interpretado" imagen="https://images.pexels.com/photos/35900109/pexels-photo-35900109.jpeg?_gl=1*qqvy7b*_ga*NTc3MDUyOTEyLjE3NTk1MDk3MDU.*_ga_8JE65Q40S6*czE3NzA0MDUzMzYkbzMkZzEkdDE3NzA0MDUzNjAkajM2JGwwJGgw"/>
-            <Tarjeta titulo="JavaScript" descripcion="Lenguaje de programación del lado del cliente"/>
-            <Tarjeta titulo="C++" descripcion="Lenguaje de programación compilado"/>
+            <Tarjeta titulo="Vinilos clásicos" descripcion="Ediciones originales y reediciones remasterizadas: rock, jazz, soul y más." imagen="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60"/>
+            <Tarjeta titulo="CDs coleccionables" descripcion="Ediciones limitadas, bonus tracks y cajas de colección para amantes del formato compacto." imagen="https://unsplash.com/photos/a-pile-of-books-sitting-on-top-of-a-wooden-table-6-6OBSLyPw"/>
+            <Tarjeta titulo="Singles (45 RPM)" descripcion="Discos sencillos y rarezas para completar tu colección de singles." imagen="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60"/>
+            <Tarjeta titulo="Accesorios & tornamesas" descripcion="Agujas, fundas, limpiadores y tornamesas para disfrutar mejor tus discos." imagen="https://images.unsplash.com/photo-1510070009289-b5bc34383727?auto=format&fit=crop&w=800&q=60"/>
        </div>
        </div>
        </>

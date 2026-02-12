@@ -1,38 +1,18 @@
-.ContenedorInformacion {
-    width: 100%;
-    height: 300px;
+.ContenedorInformacion{ width:100%; display:flex; justify-content:center; padding: 20px 0; }
+.Info{
+    flex: 1 0 auto; /* allow this section to take available vertical space */
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-}
-
-.Info {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3)), url('./assets/react.svg'); /*Aqui pones tu imagen, no quites el linear gradient*/
-    background-position: center;
-    background-size: cover;
     width: 90%;
-    height: 300px;
-    margin: 0 auto;
-    text-align: center;
-    border-radius: 10px;
-    padding: 10px;
+    max-width: 1100px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    text-align: left;
 }
-
-.Info h3 {
-    font-size: 40px;
-    color: #6f8f72; /* verde grisáceo */
-    margin-top: 20px;
-}
-
-.Info p {
-    font-size: 30px;
-    color: #504b43; /* tono café/gris */
-    margin: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.Info a {
-    color: #504b43; /* cambia a café/gris al pasar el mouse */ 
-    text-decoration: underline solid #77ad78 2px; 
-}
+.Info > div, .Info > *{ max-width: 900px; }
+.Info h3{ font-size: 28px; color: var(--c1); margin: 8px 0 12px; }
+.Info p{ font-size: 16px; color: var(--c1); line-height:1.5; }
+.Info a{ color: var(--c2); text-decoration: underline; }

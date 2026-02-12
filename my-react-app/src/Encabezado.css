@@ -1,73 +1,50 @@
 .Encabezado {
-    background-color: #8fd694;
-    width: 100%;   
-    box-shadow: 2px 2px 10px rgba(111, 143, 114, 0.5); /* sombra verde/gris */
+    width: 100%;
+    background: var(--c3);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
-.Encabezado div {
+.Encabezado > div {
     display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
 }
 
 .Logo {
-    width: 20%;
-    justify-content: center;
-    align-items: center;
+    width: 18%;
     display: flex;
-}
-.Logo img {
-    width: 100px;
-}
-
-.menuDiv {
-    width: 60%;
     align-items: center;
-    justify-content: center;
 }
+.Logo img { width: 90px; }
+
+.menuDiv { width: 60%; display:flex; justify-content:center; }
 .menuDiv ul {
-    width: 80%;
     display: flex;
+    gap: 18px;
     list-style: none;
-    gap: 30px;
-    font-size: 30px;
-    font-family: titulos;
-    background-color: #6f8f72; /* verde grisáceo */
-    margin-top: 50px;
-    padding: 10px;
-    border-radius: 10px;
-    justify-content: center;
+    margin: 0;
+    padding: 6px 12px;
+    border-radius: 8px;
     align-items: center;
 }
-.menuDiv ul li a {
-    text-decoration: none;
-    color: #ffffff;
+.menuDiv ul li {
+    cursor: pointer;
+    color: var(--c5);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.22s ease;
+    font-weight: 600;
 }
-.menuDiv ul li a:hover {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #504b43; /* café/gris */
-    padding: 10px;
-    transform: scale(1.2);
-    transition: all 0.3s ease-in-out;
-    border-radius: 10px;
+/* Hover effects requested for header options */
+.menuDiv ul li:hover{
+    /* hover effects removed as requested: no transform, no background, no shadow */
+    background: transparent;
+    color: var(--c5);
+    transform: none;
+    box-shadow: none;
 }
 
-.redesDiv {
-    width: 20%;
-    justify-content: center;
-    align-items: center;
-    margin-right: 100px;
-}
-.redesDiv ul {
-    display: flex;
-    list-style: none;
-    text-decoration: none;
-}
-.redesDiv li img {
-    width: 50px;
-    display: flex;
-    margin: 10px;
-    filter: drop-shadow(2px 2px 5px rgba(119, 173, 120, 0.8)); /* sombra verde */
-}
-.redesDiv ul li img:hover {
-    transform: scale(1.2);
-    transition: all 0.3s ease-in-out;
-}
+.redesDiv { width: 22%; display:flex; justify-content:flex-end; align-items:center; }
+.redesDiv ul { display:flex; list-style:none; margin:0; padding:0; }
+.redesDiv li img { width:44px; margin-left:10px; filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.15)); transition: transform 0.2s ease; }
+.redesDiv li img:hover { transform: scale(1.15); }

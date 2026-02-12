@@ -1,26 +1,15 @@
-.ContenedorPie {
+.ContenedorPie{
     width: 100%;
     display: flex;
-    margin: 0 auto;
-    margin-top: 50px;
+    box-sizing: border-box;
     align-items: center;
-    justify-content: center;
-    font-family: ligas;
-    background-color:  #8fd694;
-    font-size: 20px;
+    justify-content: space-between;
+    padding: 18px 36px;
+    margin-top: 300px;
+    background: var(--c2);
+    color: var(--c5);
+    font-size: 16px;
 }
-
-.Pie {
-    width: 50%;
-    text-align: left;
-    margin-left: 50px;
-    color: #504b43; /* tono café/gris */
-}
-
-.Pie2 {
-    width: 50%;
-    text-align: right;
-    margin-right: 50px;
-    color: #6f8f72; /* verde grisáceo */
-}
+.Pie{ width: 50%; text-align: left; color: var(--c5); }
+.Pie2{ width: 50%; text-align: right; color: var(--c5); }
 
