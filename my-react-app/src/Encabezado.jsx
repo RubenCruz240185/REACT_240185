@@ -4,6 +4,7 @@ import instagram from './assets/LogosRedes/instagram.png';
 import github from './assets/LogosRedes/github.png';
 import './Encabezado.css';
 import PropTypes from'prop-types';
+import Clima from './Clima';
 
 function Encabezado({CambiarVista}) {
     return (
@@ -45,6 +46,7 @@ function Redes(){
                 <li><img src={github} alt="github"/></li>
                 <li><img src={linkedin} alt="linkedin"/></li>
             </ul>
+            <Clima/>
         </div>
     )
 }
