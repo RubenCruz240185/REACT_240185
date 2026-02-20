@@ -3,6 +3,7 @@ import AcercaDe from './AcercaDe.jsx';
 import Contacto from './Contacto.jsx';
 import Sucursales from './Sucursales.jsx';
 import Galeria from './Galeria.jsx'
+import Productos from './Productos.jsx';
 import './ContenedorTarjetas.css';
 import Mapa from './Mapa';
 
@@ -13,7 +14,8 @@ function ContenedorTarjetas({vista}) {
         "AcercaDe": <AcercaDe/>,
         "Contacto": <Contacto/>,
         "Sucursales": <Sucursales/>,
-        "Galeria": <Galeria/>
+        "Galeria": <Galeria/>,
+        "Productos": <Productos/>
         
     }
     return (

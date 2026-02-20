@@ -2,7 +2,9 @@ import './Informacion.css';
 import MapaGeolocalizacion from './MapaGeolocalizacion';
 function ContenedorInformacion(){
     return(
-        <Informacion />
+        <div className="ContenedorInformacion">
+            <Informacion />
+        </div>
     )
 }
 

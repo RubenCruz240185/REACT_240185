@@ -34,6 +34,7 @@ function Menu({CambiarVista}){
             <li onClick={() => CambiarVista("Contacto")}>Contacto</li>
             <li onClick={() => CambiarVista("Sucursales")}>Sucursales</li>
             <li onClick={() => CambiarVista("Galeria")}>Galeria</li>
+            <li onClick={() => CambiarVista("Productos")}>Productos</li>
         </ul>
     </div>
     );

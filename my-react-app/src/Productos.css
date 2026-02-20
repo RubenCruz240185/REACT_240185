@@ -1,0 +1,40 @@
+.Productos {
+  padding: 20px;
+}
+.productos-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.producto-card{
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.08);
+  padding:12px;
+  text-align:center;
+}
+.producto-card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+.producto-media{
+  width:100%;
+  height:160px;
+  overflow:hidden;
+  border-radius:6px;
+}
+.producto-body{
+  padding:8px 6px;
+}
+.producto-card h3{
+  font-size:16px;
+  margin:8px 0 4px;
+}
+.precio{
+  color:#1a8a34;
+  font-weight:600;
+}
