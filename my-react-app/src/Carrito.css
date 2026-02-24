@@ -1,0 +1,66 @@
+.carrito-section {
+  width: min(1100px, 94%);
+  margin: 12px auto 0;
+}
+
+.carrito-section h2 {
+  color: #a5652c;
+  margin: 0 0 18px;
+}
+
+.carrito-error {
+  color: #b42318;
+  margin-bottom: 12px;
+}
+
+.carrito-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.carrito-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d6dbe6;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.carrito-id {
+  margin: 0;
+  color: #2c4f8f;
+  font-weight: 700;
+}
+
+.carrito-date {
+  color: #c2414d;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.carrito-card h3 {
+  margin: 8px 0;
+  color: #b74a57;
+}
+
+.carrito-card ul {
+  margin: 0 0 10px;
+  padding-left: 18px;
+}
+
+.carrito-card li {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.carrito-card button {
+  border: none;
+  border-radius: 8px;
+  padding: 7px 14px;
+  background: #e79cb8;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}

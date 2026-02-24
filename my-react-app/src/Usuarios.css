@@ -1,0 +1,99 @@
+.usuarios-section {
+  width: min(1100px, 94%);
+  margin: 12px auto 0;
+  background: rgba(255, 255, 255, 0.84);
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.usuarios-section h2 {
+  margin: 0 0 16px;
+  color: #a5652c;
+  text-align: center;
+}
+
+.usuarios-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.usuarios-form input,
+.usuarios-form button {
+  border: 1px solid #b7bfd1;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.usuarios-form button {
+  border: none;
+  background: #2c4f8f;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.usuarios-form button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.usuarios-error {
+  margin: 0 0 12px;
+  color: #b42318;
+}
+
+.tabla-wrapper {
+  overflow-x: auto;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  border: 1px solid #d4d8e1;
+  padding: 8px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.tabla-usuarios th {
+  background: #f3f5f8;
+}
+
+.btn-editar,
+.btn-eliminar {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background: #d4a017;
+}
+
+.btn-eliminar {
+  background: #d92d20;
+}
+
+@media (max-width: 900px) {
+  .usuarios-form {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .usuarios-form {
+    grid-template-columns: 1fr;
+  }
+}

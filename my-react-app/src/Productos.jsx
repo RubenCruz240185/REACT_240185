@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import api from './Services/api';
 import './Productos.css';
 import ProductCard from './ProductCard.jsx';
 
-function Productos(){
+function Productos({ onAgregarCarrito }) {
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(true);
+
     useEffect(() => {
         const obtenerProductos = async () => {
             try {
@@ -21,22 +23,30 @@ function Productos(){
         obtenerProductos();
     }, []);
 
-    if (cargando) return <p>Cargando productos...</p>
+    if (cargando) return <p>Cargando productos...</p>;
 
-  return (
-    <div className="Productos">
-        <h2>Productos Destacados</h2>
-        {productos.length === 0 ? (
-            <p>No hay productos disponibles.</p>
-        ) : (
-            <div className="productos-grid">
-                {productos.map((producto) => (
-                    <ProductCard key={producto.id} producto={producto} />
-                ))}
-            </div>
-        )}
-    </div>
-  );
+    return (
+        <div className="Productos">
+            <h2>Productos Destacados</h2>
+            {productos.length === 0 ? (
+                <p>No hay productos disponibles.</p>
+            ) : (
+                <div className="productos-grid">
+                    {productos.map((producto) => (
+                        <ProductCard
+                            key={producto.id}
+                            producto={producto}
+                            onAgregarCarrito={onAgregarCarrito}
+                        />
+                    ))}
+                </div>
+            )}
+        </div>
+    );
 }
+
+Productos.propTypes = {
+    onAgregarCarrito: PropTypes.func.isRequired,
+};
 
 export default Productos;

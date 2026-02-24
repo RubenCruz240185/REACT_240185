@@ -4,18 +4,22 @@ import Contacto from './Contacto.jsx';
 import Sucursales from './Sucursales.jsx';
 import Galeria from './Galeria.jsx'
 import Productos from './Productos.jsx';
+import Usuarios from './Usuarios.jsx';
+import Carrito from './Carrito.jsx';
 import './ContenedorTarjetas.css';
 import Mapa from './Mapa';
 
 
-function ContenedorTarjetas({vista}) {
+function ContenedorTarjetas({vista, carritoLocal, agregarAlCarrito}) {
     const vistas = {
         "Inicio": <Inicio/>,
         "AcercaDe": <AcercaDe/>,
         "Contacto": <Contacto/>,
         "Sucursales": <Sucursales/>,
         "Galeria": <Galeria/>,
-        "Productos": <Productos/>
+        "Productos": <Productos onAgregarCarrito={agregarAlCarrito} />,
+        "Usuarios": <Usuarios/>,
+        "Carrito": <Carrito carritoLocal={carritoLocal} />
         
     }
     return (
@@ -73,5 +77,7 @@ function Inicio(){
 
 ContenedorTarjetas.propTypes = {
     vista: PropTypes.string.isRequired,
+    carritoLocal: PropTypes.arrayOf(PropTypes.object).isRequired,
+    agregarAlCarrito: PropTypes.func.isRequired,
 };
 export default ContenedorTarjetas;

@@ -31,10 +31,12 @@ function Menu({CambiarVista}){
         <ul>
             <li onClick={() => CambiarVista("Inicio")}>Inicio</li>
             <li onClick={() => CambiarVista("AcercaDe")}>Acerca de</li>
-            <li onClick={() => CambiarVista("Contacto")}>Contacto</li>
-            <li onClick={() => CambiarVista("Sucursales")}>Sucursales</li>
-            <li onClick={() => CambiarVista("Galeria")}>Galeria</li>
+            <li onClick={() => CambiarVista("Usuarios")}>Usuarios</li>
             <li onClick={() => CambiarVista("Productos")}>Productos</li>
+            <li onClick={() => CambiarVista("Carrito")}>Carrito</li>
+            <li onClick={() => CambiarVista("Galeria")}>Galeria</li>
+            <li onClick={() => CambiarVista("Sucursales")}>Sucursales</li>
+            <li onClick={() => CambiarVista("Contacto")}>Contacto</li>
         </ul>
     </div>
     );

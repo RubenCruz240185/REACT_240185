@@ -38,3 +38,13 @@
   color:#1a8a34;
   font-weight:600;
 }
+
+.agregar-carrito {
+  border: none;
+  background: #2c4f8f;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
