@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import api from './Services/api';
 import './Productos.css';
 import ProductCard from './ProductCard.jsx';
+import RegistrarProductos from './RegistrarProducto.jsx';
 
 function Productos({ onAgregarCarrito }) {
     const [productos, setProductos] = useState([]);
@@ -27,6 +28,7 @@ function Productos({ onAgregarCarrito }) {
 
     return (
         <div className="Productos">
+            <RegistrarProductos/>
             <h2>Productos Destacados</h2>
             {productos.length === 0 ? (
                 <p>No hay productos disponibles.</p>
