@@ -1,4 +1,39 @@
+import { useState } from "react";
+import api from "./Services/api";
+import './RegistrarProducto.css';
+
 function RegistrarProductos(){
+    const [productos, setProductos] = useState({
+        titulo: '',
+        price: '',
+        description: '',
+        image: '',
+        category: ''
+    });
+
+    const handleChange = (e) => {
+        setProductos({
+            ...productos,
+            [e.target.name]: e.target.value
+        });
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        try {
+            await api.post('/products', productos);
+                alert('Producto registrado exitosamente');
+                console.log('Producto registrado:', productos); 
+                setProductos({
+                titulo: '',
+                price: '',
+                description: '',
+                image: '',
+                category: ''
+            });
+        } catch (error) {
+            console.error('Error al registrar el producto:', error);
+        }
+}
     return(
         <div className="registro-container">
             <div className="registro-card">
@@ -21,7 +56,7 @@ function RegistrarProductos(){
 
                     <button type="submit">Registrar Producto</button>
                 </form>
-            </div>
+            </div> 
         </div>
     )
 }

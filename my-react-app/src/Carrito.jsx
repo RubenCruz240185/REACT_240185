@@ -74,10 +74,15 @@ function Carrito({ carritoLocal }) {
                 const info = catalogo[producto.productId];
                 const nombre = info?.title ? info.title : `Producto #${producto.productId}`;
 
+               
+
                 return (
                   <li key={`${carrito.id}-${producto.productId}`}>
                     {nombre} - Cantidad: {producto.quantity}
-                  </li>
+                  
+                  <button type="button" className="carrito-remove-btn" onClick={() => handleEliminarProducto(carrito.id, producto.productId)}>
+                  X
+                  </button></li> 
                 );
               })}
             </ul>
