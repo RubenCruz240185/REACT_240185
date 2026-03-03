@@ -1,0 +1,136 @@
+.registrar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.registrar-card {
+  width: 100%;
+  max-width: 500px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+  border: 1px solid #dbe4ff;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(28, 61, 131, 0.15);
+  padding: 32px;
+}
+
+.registrar-titulo {
+  margin: 0 0 8px;
+  font-size: 1.75rem;
+  color: #1a2950;
+  font-weight: 800;
+  text-align: center;
+}
+
+.registrar-subtitulo {
+  margin: 0 0 24px;
+  color: #5a6b92;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.registrar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.registrar-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.registrar-campo label {
+  font-weight: 700;
+  color: #243867;
+  font-size: 0.93rem;
+}
+
+.registrar-campo input {
+  border: 1.5px solid #cad7ff;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font-size: 0.95rem;
+  color: #20325c;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registrar-campo input::placeholder {
+  color: #9aa6c7;
+}
+
+.registrar-campo input:focus {
+  outline: none;
+  border-color: #4d77e3;
+  box-shadow: 0 0 0 4px rgba(77, 119, 227, 0.15);
+}
+
+.registrar-acciones {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-registrar,
+.btn-cancelar {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.96rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-registrar {
+  background: linear-gradient(135deg, #2f5dd4 0%, #2450bf 100%);
+  color: #ffffff;
+}
+
+.btn-registrar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(36, 80, 191, 0.4);
+}
+
+.btn-registrar:active {
+  transform: translateY(0);
+}
+
+.btn-cancelar {
+  background: #e7ebf4;
+  color: #243867;
+}
+
+.btn-cancelar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(36, 56, 103, 0.15);
+}
+
+.btn-cancelar:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .registrar-card {
+    padding: 24px;
+  }
+
+  .registrar-titulo {
+    font-size: 1.45rem;
+  }
+
+  .registrar-subtitulo {
+    font-size: 0.88rem;
+  }
+
+  .registrar-campo input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}

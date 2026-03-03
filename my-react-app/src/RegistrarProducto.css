@@ -1,0 +1,75 @@
+.registro-container {
+  width: min(760px, 100%);
+  margin: 0 auto 20px;
+}
+
+.registro-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.registro-card h2 {
+  margin: 0 0 12px;
+  color: #243867;
+}
+
+.registro-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.registro-form label {
+  font-size: 13px;
+  color: #334155;
+  margin-bottom: 4px;
+}
+
+.registro-form input {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.registro-form input[name="description"],
+.registro-form input[name="image"],
+.registro-form input[name="category"] {
+  grid-column: 1 / -1;
+}
+
+.registro-acciones {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+}
+
+.registro-acciones button {
+  border: none;
+  background: #2c4f8f;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-cancelar-producto {
+  background: #64748b;
+}
+
+@media (max-width: 640px) {
+  .registro-form {
+    grid-template-columns: 1fr;
+  }
+
+  .registro-form input[name="description"],
+  .registro-form input[name="image"],
+  .registro-form input[name="category"],
+  .registro-acciones {
+    grid-column: auto;
+  }
+}
