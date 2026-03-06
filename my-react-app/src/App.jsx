@@ -3,6 +3,7 @@ import { useState } from "react";
 import ContenedorTarjetas from "./ContenedorTarjetas.jsx";
 import ContenedorInformacion from "./Informacion.jsx";
 import ContenedorPie from "./Pie.jsx";
+import { AuthProvider } from "./AuthContext.jsx";
 
 function App() {
   const [vista, setVista] = useState("Inicio");
@@ -33,7 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <Encabezado CambiarVista={setVista} />
+      <AuthProvider>
+      <Encabezado CambiarVista={setVista} /></AuthProvider>
       <ContenedorTarjetas
         vista={vista}
         carritoLocal={carritoLocal}

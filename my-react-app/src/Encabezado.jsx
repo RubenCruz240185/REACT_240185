@@ -5,6 +5,7 @@ import github from './assets/LogosRedes/github.png';
 import './Encabezado.css';
 import PropTypes from'prop-types';
 import Clima from './Clima';
+import { use } from 'react';
 
 function Encabezado({CambiarVista}) {
     return (
@@ -26,17 +27,27 @@ function Logo(){
     );
 }
 function Menu({CambiarVista}){
+    const {isLoggedIn, logout} = useAuth();
     return (
     <div className="menuDiv">
         <ul>
             <li onClick={() => CambiarVista("Inicio")}>Inicio</li>
             <li onClick={() => CambiarVista("AcercaDe")}>Acerca de</li>
-            <li onClick={() => CambiarVista("Usuarios")}>Usuarios</li>
             <li onClick={() => CambiarVista("Productos")}>Productos</li>
-            <li onClick={() => CambiarVista("Carrito")}>Carrito</li>
+
+            {isLoggedIn ? (
+                <>
+            <li onClick={() => CambiarVista("Usuarios")}>Usuarios</li>
+            <li onClick={() => CambiarVista("Carrito")}>Carrito</li>  
+            <li>Cerrar sesión</li>
+            </>):
+            (
+                <li onClick={() => CambiarVista("Login")}>Login</li>
+            )}
             <li onClick={() => CambiarVista("Galeria")}>Galeria</li>
             <li onClick={() => CambiarVista("Sucursales")}>Sucursales</li>
             <li onClick={() => CambiarVista("Contacto")}>Contacto</li>
+           
         </ul>
     </div>
     );
