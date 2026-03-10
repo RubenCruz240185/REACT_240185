@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./Login.css";
 import api from "./Services/api";
+import { useAuth } from "./AuthContext";
 
-function Login() {
+function Login({CambiarVista}) {
+    const { login } = useAuth();
     const [usuario, setUsuario] = useState("");
-    const [contraseña, setContraseña] = useState("");
+    const [contrasena, setContrasena] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
@@ -19,16 +21,21 @@ function Login() {
             const res = await api.get("/users");
             const users = res.data;
             const user = users.find(
-                u => u.username === usuario && u.password === contraseña
+                u => u.username === usuario && u.password === contrasena
             );
             if (user) {
-                // Solicitar token
                 const loginRes = await api.post("/auth/login", {
                     username: usuario,
-                    password: contraseña
+                    password: contrasena
                 });
-                console.log("Token:", loginRes.data.token);
-                setSuccess(true);
+                const token = loginRes.data.token;
+                if (token) {
+                    login(token);
+                    setSuccess(true);
+                    CambiarVista && CambiarVista("Inicio");
+                } else {
+                    setError("No se recibió token del servidor.");
+                }
             } else {
                 setError("Usuario o contraseña incorrectos.");
             }
@@ -56,9 +63,9 @@ function Login() {
                     <label>Contraseña:</label>
                     <input
                         type="password"
-                        name="contraseña"
-                        value={contraseña}
-                        onChange={e => setContraseña(e.target.value)}
+                        name="contrasena"
+                        value={contrasena}
+                        onChange={e => setContrasena(e.target.value)}
                         required
                     />
                 </div>
@@ -70,7 +77,7 @@ function Login() {
                 <div style={{ marginTop: "10px" }}>
                     <a href="#">Olvidé mi contraseña</a>
                     <span> | </span>
-                    <a href="#">Crear cuenta</a>
+                    <button type="button" className="link-button" onClick={() => CambiarVista && CambiarVista("RegistrarUsuario")}>Crear cuenta</button>
                 </div>
             </form>
         </div>

@@ -6,20 +6,24 @@ import Galeria from './Galeria.jsx'
 import Productos from './Productos.jsx';
 import Usuarios from './Usuarios.jsx';
 import Carrito from './Carrito.jsx';
+import Login from './Login.jsx';
+import RegistrarUsuario from './RegistrarUsuario.jsx';
 import './ContenedorTarjetas.css';
 import Mapa from './Mapa';
 
 
-function ContenedorTarjetas({vista, carritoLocal, agregarAlCarrito}) {
+function ContenedorTarjetas({vista, carritoLocal, agregarAlCarrito, CambiarVista}) {
     const vistas = {
         "Inicio": <Inicio/>,
         "AcercaDe": <AcercaDe/>,
-        "Contacto": <Contacto/>,
+        "Contacto": <Contacto CambiarVista={CambiarVista} />,
         "Sucursales": <Sucursales/>,
         "Galeria": <Galeria/>,
         "Productos": <Productos onAgregarCarrito={agregarAlCarrito} />,
         "Usuarios": <Usuarios/>,
-        "Carrito": <Carrito carritoLocal={carritoLocal} />
+        "Carrito": <Carrito carritoLocal={carritoLocal} />,
+        "Login": <Login CambiarVista={CambiarVista} />,
+        "RegistrarUsuario": <RegistrarUsuario CambiarVista={CambiarVista} />
         
     }
     return (
@@ -79,5 +83,6 @@ ContenedorTarjetas.propTypes = {
     vista: PropTypes.string.isRequired,
     carritoLocal: PropTypes.arrayOf(PropTypes.object).isRequired,
     agregarAlCarrito: PropTypes.func.isRequired,
+    CambiarVista: PropTypes.func.isRequired,
 };
 export default ContenedorTarjetas;

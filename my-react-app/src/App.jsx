@@ -35,14 +35,16 @@ function App() {
   return (
     <div className="App">
       <AuthProvider>
-      <Encabezado CambiarVista={setVista} /></AuthProvider>
-      <ContenedorTarjetas
-        vista={vista}
-        carritoLocal={carritoLocal}
-        agregarAlCarrito={agregarAlCarrito}
-      />
-      <ContenedorInformacion />
-      <ContenedorPie />
+        <Encabezado CambiarVista={setVista} />
+        <ContenedorTarjetas
+          vista={vista}
+          carritoLocal={carritoLocal}
+          agregarAlCarrito={agregarAlCarrito}
+          CambiarVista={setVista}
+        />
+        <ContenedorInformacion />
+        <ContenedorPie />
+      </AuthProvider>
     </div>
   );
 }

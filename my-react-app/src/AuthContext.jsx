@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState, useContext } from "react";
 const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
