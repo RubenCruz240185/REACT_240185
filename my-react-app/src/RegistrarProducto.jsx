@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "./Services/api";
 import "./RegistrarProducto.css";
+import { useAuth } from "./AuthContext.jsx";
 
 function RegistrarProductos({ productoEditado, limpiarSeleccion, onActualizacionExitosa }) {
     const [productos, setProductos] = useState({
@@ -10,6 +11,7 @@ function RegistrarProductos({ productoEditado, limpiarSeleccion, onActualizacion
         image: '',
         category: ''
     });
+    const { isLoggedIn } = useAuth();
 
     useEffect(() => {
         if (productoEditado) {
@@ -67,6 +69,8 @@ function RegistrarProductos({ productoEditado, limpiarSeleccion, onActualizacion
             alert('No se pudo guardar el producto');
         }
     }
+
+    if (!isLoggedIn) return null;
     
     return(
         <div className="registro-container">

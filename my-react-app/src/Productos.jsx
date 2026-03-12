@@ -4,11 +4,13 @@ import api from './Services/api';
 import './Productos.css';
 import ProductCard from './ProductCard.jsx';
 import RegistrarProductos from './RegistrarProducto.jsx';
+import { useAuth } from './AuthContext.jsx';
 
 function Productos({ onAgregarCarrito }) {
     const [productos, setProductos] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [productoSeleccionado, setProductoSeleccionado] = useState(null);
+    const { isLoggedIn } = useAuth();
 
     const obtenerProductos = async () => {
         try {
@@ -42,11 +44,13 @@ function Productos({ onAgregarCarrito }) {
 
     return (
         <div className="Productos">
-            <RegistrarProductos
-                productoEditado={productoSeleccionado}
-                limpiarSeleccion={setProductoSeleccionado}
-                onActualizacionExitosa={obtenerProductos}
-            />
+            {isLoggedIn ? (
+                <RegistrarProductos
+                    productoEditado={productoSeleccionado}
+                    limpiarSeleccion={setProductoSeleccionado}
+                    onActualizacionExitosa={obtenerProductos}
+                />
+            ) : null}
             <h2>Productos Destacados</h2>
             {productos.length === 0 ? (
                 <p>No hay productos disponibles.</p>
@@ -58,22 +62,24 @@ function Productos({ onAgregarCarrito }) {
                                 producto={producto}
                                 onAgregarCarrito={onAgregarCarrito}
                             />
-                            <div className="producto-acciones">
-                                <button
-                                    className="btn-editar-producto"
-                                    type="button"
-                                    onClick={() => setProductoSeleccionado(producto)}
-                                >
-                                    Editar
-                                </button>
-                                <button
-                                    className="btn-eliminar-producto"
-                                    type="button"
-                                    onClick={() => handleEliminarProducto(producto.id)}
-                                >
-                                    Eliminar
-                                </button>
-                            </div>
+                            {isLoggedIn ? (
+                                <div className="producto-acciones">
+                                    <button
+                                        className="btn-editar-producto"
+                                        type="button"
+                                        onClick={() => setProductoSeleccionado(producto)}
+                                    >
+                                        Editar
+                                    </button>
+                                    <button
+                                        className="btn-eliminar-producto"
+                                        type="button"
+                                        onClick={() => handleEliminarProducto(producto.id)}
+                                    >
+                                        Eliminar
+                                    </button>
+                                </div>
+                            ) : null}
                         </div>
                     ))}
                 </div>

@@ -10,6 +10,7 @@ import Login from './Login.jsx';
 import RegistrarUsuario from './RegistrarUsuario.jsx';
 import './ContenedorTarjetas.css';
 import Mapa from './Mapa';
+import Categorias from './Categorias';
 
 
 function ContenedorTarjetas({vista, carritoLocal, agregarAlCarrito, CambiarVista}) {
@@ -23,7 +24,8 @@ function ContenedorTarjetas({vista, carritoLocal, agregarAlCarrito, CambiarVista
         "Usuarios": <Usuarios/>,
         "Carrito": <Carrito carritoLocal={carritoLocal} />,
         "Login": <Login CambiarVista={CambiarVista} />,
-        "RegistrarUsuario": <RegistrarUsuario CambiarVista={CambiarVista} />
+        "RegistrarUsuario": <RegistrarUsuario CambiarVista={CambiarVista} />,
+        "Categorias": <Categorias />
         
     }
     return (

@@ -1,0 +1,65 @@
+.categorias-container {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.categorias-titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.categoria-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categoria-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.categoria-img {
+    width: 100%;
+    max-width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.categoria-nombre {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.categoria-desc {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.categorias-estado {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    color: #555;
+}
+
+.categorias-error {
+    color: #e53935;
+}

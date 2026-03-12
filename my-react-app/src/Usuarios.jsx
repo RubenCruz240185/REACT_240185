@@ -2,11 +2,13 @@ import './Usuarios.css';
 import { useEffect, useState } from 'react';
 import api from './Services/api';
 import RegistrarUsuario from './RegistrarUsuario';
+import { useAuth } from './AuthContext.jsx';
 
 function Usuario() {
     const [usuarios, setUsuarios] = useState([]);
     const [cargando, setCargando] = useState(true);
     const [usuarioSeleccionado, setUsuarioSeleccionado] = useState(null);
+    const { isLoggedIn } = useAuth();
             const obtenerUsuarios = async () => {
             try{
                 const response = await api.get('/users');
@@ -25,11 +27,13 @@ function Usuario() {
 
     return (
         <div className="usuarios">
-            <RegistrarUsuario 
-            usuarioEditado={usuarioSeleccionado}
-            limpiarSeleccion={setUsuarioSeleccionado}
-            onActualizacionExitosa={obtenerUsuarios}
-            />
+            {isLoggedIn ? (
+                <RegistrarUsuario 
+                usuarioEditado={usuarioSeleccionado}
+                limpiarSeleccion={setUsuarioSeleccionado}
+                onActualizacionExitosa={obtenerUsuarios}
+                />
+            ) : null}
 
             <h1>Usuarios Registrados</h1>
             <table className="tabla-usuarios">
@@ -42,8 +46,8 @@ function Usuario() {
                         <th>Correo</th>
                         <th>Username</th>
                         <th>Password</th>
-                        <th>Editar</th>
-                        <th>Eliminar</th>
+                        {isLoggedIn ? <th>Editar</th> : null}
+                        {isLoggedIn ? <th>Eliminar</th> : null}
                     </tr>
                 </thead>
                 <tbody>
@@ -56,8 +60,8 @@ function Usuario() {
                             <td>{usuario.email}</td>
                             <td>{usuario.username}</td>
                             <td>{usuario.password}</td>
-                            <td><button className="editar" onClick={() => setUsuarioSeleccionado(usuario)}>Editar</button></td>
-                            <td><button className="eliminar">Eliminar</button></td>
+                            {isLoggedIn ? <td><button className="editar" onClick={() => setUsuarioSeleccionado(usuario)}>Editar</button></td> : null}
+                            {isLoggedIn ? <td><button className="eliminar">Eliminar</button></td> : null}
                         </tr>
                     ))}
                 </tbody>
